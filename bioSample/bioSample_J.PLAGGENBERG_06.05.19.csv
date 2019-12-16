@@ -1,0 +1,13 @@
+harvestDate,harvester,biosampleNumber,experimentDesign,experimentObservations,strain,genotype,floodmedia,inductionDelay,treatment,timePoint
+05.17.19,J.PLAGGENBERG,1,ZEV_flood_media_delay_2,,,BY4741,PBS,1,EtoH,-1
+05.17.19,J.PLAGGENBERG,2,ZEV_flood_media_delay_2,,,BY4741,PBS,1,Estradiol,-1
+05.17.19,J.PLAGGENBERG,3,ZEV_flood_media_delay_2,,,BY4741,PBS,15,Estradiol,-1
+05.17.19,J.PLAGGENBERG,4,ZEV_flood_media_delay_2,,,BY4741,SCGal ,1,EtoH,-1
+05.17.19,J.PLAGGENBERG,5,ZEV_flood_media_delay_2,,,BY4741,SCGal ,1,Estradiol,-1
+05.17.19,J.PLAGGENBERG,6,ZEV_flood_media_delay_2,,,BY4741,SCGal ,15,Estradiol,-1
+05.17.19,J.PLAGGENBERG,7,ZEV_flood_media_delay_2,,,BY4741,PBS,1,EtoH,15
+05.17.19,J.PLAGGENBERG,8,ZEV_flood_media_delay_2,,,BY4741,PBS,1,Estradiol,15
+05.17.19,J.PLAGGENBERG,9,ZEV_flood_media_delay_2,,,BY4741,PBS,15,Estradiol,15
+05.17.19,J.PLAGGENBERG,10,ZEV_flood_media_delay_2,,,BY4741,SCGal ,1,EtoH,15
+05.17.19,J.PLAGGENBERG,11,ZEV_flood_media_delay_2,,,BY4741,SCGal ,1,Estradiol,15
+05.17.19,J.PLAGGENBERG,12,ZEV_flood_media_delay_2,,,BY4741,SCGal ,15,Estradiol,15
