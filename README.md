@@ -20,6 +20,4 @@ You can find the specifications(the column headers as well as entries of the fil
 # Git workflow
 
 1. Pull the most up-to-date repository
-```
-git pull
-```
+`git pull`
