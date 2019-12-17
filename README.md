@@ -16,3 +16,10 @@ library_M.BRENT_08.02.19
 fastqFiles_08.04.19 (may contain files for libraries prepared by multiple people)
 
 You can find the specifications(the column headers as well as entries of the files) of the database files in specification.docx in the repository.
+
+# Git workflow
+
+1. Pull the most up-to-date repository
+```
+git pull
+```
