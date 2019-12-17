@@ -10,7 +10,7 @@ All names should be FIRSTINITIAL.LASTNAME, all caps. E.g. “M.BRENT”
 
 Each table should be in a separate .csv file, named according to the following scheme:
 
-bioSample_M.BRENT_07.29.19\\
+bioSample_M.BRENT_07.29.19\n
 rnaSample_M.BRENT_07.30.19
 s1cDNASample_M.BRENT_07.31.19
 s1s2Pooling_M.BRENT_07.31.19
