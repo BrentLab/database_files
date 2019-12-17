@@ -21,7 +21,9 @@ You can find the specifications(the column headers as well as entries of the fil
 
 1. Pull the most up-to-date repository. This can be done with the following command: 
 
-```git pull```
+```
+git pull
+```
 
 2. Make edits or create new files.
 3. Add the changes made to git.
