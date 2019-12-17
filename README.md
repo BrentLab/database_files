@@ -19,6 +19,9 @@ You can find the specifications(the column headers as well as entries of the fil
 
 # Git workflow
 
-1. Pull the most up-to-date repository.
+1. Pull the most up-to-date repository. This can be done with the following command: `git pull`
 
-`git pull`
+2. Make edits or create new files.
+3. Add the changes made to git. `git add <filenames>`
+4. Commit the changed files to git. `git commit -m "<message of what was done>"`
+5. Push the changes to the central repository. `git push`
