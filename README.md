@@ -27,8 +27,9 @@ git pull
 
 2. Make edits or create new files.
 3. Add the changes made to git.
-
-`git add <filenames>`
+```
+git add <filenames>
+```
 
 4. Commit the changed files to git. `git commit -m "<message of what was done>"`
 5. Push the changes to the central repository. `git push`
