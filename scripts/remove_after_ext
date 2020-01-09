@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+import pandas as pd
+import xlrd
+import sys
+import re
+
+def removeAfterExt(metadata_sheet):
+    
+    # remove anything after .fastq.gz in the fastqFileName column of datasheet in directory fastqFiles
+    # Args: a metadata sheet read into a pandas df
+    # Output: The input datasheet modified so that there is nothing after the file extention in the fastqFileName column
+
+    metadata_sheet.fastqFileName = [re.sub(":\d*$", '',filename) for filename in metadata_sheet.fastqFileName]
+
+    return metadata_sheet
+
+def main(argv):
+
+    metadata_df = pd.read_excel(sys.argv[1])
+
+    metadata_df = removeAfterExt(metadata_df)
+
+    metadata_df.to_excel(sys.argv[2], index=False)
+
+if __name__ == '__main__':
+	main(sys.argv)
