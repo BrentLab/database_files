@@ -127,7 +127,7 @@ def moveFiles(src_file_path, desination_file_path, log_dest, run_num, index_seq)
     if os.path.isfile(src_file_path):
         cp(src_file_path, desination_file_path)
         log_dest = addForwardSlash(log_dest)
-        log_file = log_dest + 'copy_log.tsv'
+        log_file = os.path.join(log_dest, 'copy_log.tsv')
         with open(log_file, 'a+') as cp_log:
             cp_log.write('{}\t{}\t{}\t{}\n'.format(run_num, index_seq, src_file_path, desination_file_path))
 
