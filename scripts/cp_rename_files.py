@@ -15,7 +15,7 @@ import os
 import sys
 import argparse
 sys.path.append('../../rnaseq_pipe/tools')
-from queryDB import checkCSV
+from utils import checkCSV
 # UPDATE FOR CLUSTER/ALL SYSTEMS
 
 def main(argv, rows_to_skip = -1):
@@ -33,11 +33,17 @@ def main(argv, rows_to_skip = -1):
         if index < rows_to_skip:
             pass
         else:
+            # get relevant information from the row
             run_num = row['RUN_NUMBER']
             index_seq = row['INDEX']
             index_seq = removeIndex2(index_seq)
+            # in the destination directory, create a directory called "run_####" if one doesn't already exist
+            run_num_dest_path = os.path.join(dest_path, 'run_{}'.format(run_num))
+            os.system('mkdir -p {}'.format(run_num_dest_path))
+
+            # feed this info into the functions below to generate src and dest filepaths from the current row
             src_file_path = getSourceFilePath(row, args.cols, src_path, args.src_suffix)
-            destination_file_path = getDestinationFilePath(dest_path, index_seq, run_num, args.dest_suffix, crypto_combined_df)
+            destination_file_path = getDestinationFilePath(run_num_dest_path, index_seq, run_num, args.dest_suffix, crypto_combined_df)
             if destination_file_path:
                 moveFiles(src_file_path, destination_file_path, args.log_dest, run_num, index_seq)
             else:
@@ -75,8 +81,10 @@ def addZero(value):
         return value
 
 def removeIndex2(identifier):
-    # if there is an index2, remove it
-    if '_' in identifier:
+    # if there is an index2, remove it. however, skip this process for the retrofit indicies
+    if identifier.startswith('retrofit'):
+        return identifier
+    elif '_' in identifier:
         regex = r".*(?=_)"
         return re.search(regex, identifier).group()
     else:
@@ -96,11 +104,9 @@ def getDestinationFilePath(dest_path, index_seq, run_num, suffix, df):
         regex_remove_file_prefix = r"[^/]+$"
         basename = re.search(regex_remove_file_prefix, filename).group()
         basename = getFilenameWithoutExtension(basename)
-        if not run_num in basename:
-            basename = run_num + '_' + basename
         if not index_seq in basename:
             basename += '_' + index_seq
-        destination = dest_path + basename + '_' + suffix
+        destination = os.path.join(dest_path, basename + '_' + suffix)
         return destination
 
 def getFilenameWithoutExtension(file_path):
