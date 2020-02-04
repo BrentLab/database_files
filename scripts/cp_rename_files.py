@@ -119,7 +119,7 @@ def getFilenameWithoutExtension(file_path):
 def getSourceFilePath(row, cols_to_iterate, src_path, src_suffix):
     src_dir = ''
     for col in cols_to_iterate:
-        src_dir = src_dir + '{}_'.format(row[col])
+        src_dir = src_dir + '{}-'.format(row[col])
     src_file_path = src_path + src_dir[0:-1] + '/' + src_suffix
     return src_file_path
 
