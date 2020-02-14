@@ -56,7 +56,7 @@ def parseArgs(argv):
     parser.add_argument('-db', '--database', required = True,
                         help = 'path to metadata combined database')
     parser.add_argument('-c', '--cols', required = True, nargs='+', default=[],
-                        help = 'columns of the sample summary sheet to iterate over')
+                        help = 'columns of the sample summary sheet to iterate over. used to create src file path. Usage so far w/ yimings sample_summary: [GENOTYPE, SAMPLE]')
     parser.add_argument('-sp', '--src_path', required = True,
                         help = 'path to source directory')
     parser.add_argument('-ss', '--src_suffix', required = True,
