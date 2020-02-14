@@ -8,7 +8,6 @@
 # date included in rnaseq_pipe: 1/21/2020
 # See the end of the script for a description of the environment used to write/test
 
-#import queryDB
 import pandas as pd
 import sys
 import argparse
