@@ -1,6 +1,6 @@
 # Database files
 
-See the wiki(https://github.com/BrentLab/database_files/wiki) for a detailed explanation of all subdirectories and sheet structure
+See the [wiki](https://github.com/BrentLab/database_files/wiki) for a detailed explanation of all subdirectories and sheet structure
 
 This is a repository for all of the database files from Brent Lab.
 
