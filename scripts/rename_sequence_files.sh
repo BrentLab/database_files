@@ -8,7 +8,7 @@ do
 done
 
 # replace extension with .fq
-rename 's/.fq/.fastq/'  $1/*
+rename 's/.fq//'  $1/*
 
 # zip
-gzip $1/*
+#gzip $1/*
