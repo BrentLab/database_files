@@ -7,7 +7,7 @@
 
 import pandas as pd
 
-fastq_sheet_path = ['/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1755.xlsx']
+fastq_sheet_path = ['/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1660.xlsx']
 
 #fastq_sheet_path = ['/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_0647.xlsx',
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_0648.xlsx',
@@ -30,6 +30,7 @@ fastq_sheet_path = ['/home/chase/code/brentlab/database-files/old_database/crypt
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1344.xlsx',
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1476.xlsx',
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1573.xlsx',
+#                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_1660.xlsx',
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_0629_0618.xlsx',
 #                    '/home/chase/code/brentlab/database-files/old_database/crypto/fastqFiles/fastq_0711_5_0718_7.xlsx',]
 
