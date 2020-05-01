@@ -19,13 +19,6 @@
 
 # for run 314 -- replace first . in file name with _, replace .fq with .fastq and zip
 
-# remove .txt from the filenames
-#for f in $1/*;
-#do
-#   full_path=$(realpath $f)
-#   mv "$full_path" "${full_path/.txt}"
-#done
-
 # replace extension with .fq
 rename 's/\./_/'  $1/*
 rename 's/.fq/.fastq/' $1/*
