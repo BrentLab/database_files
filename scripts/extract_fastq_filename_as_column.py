@@ -15,8 +15,8 @@ import pandas as pd
 
 def main(argv):
     # parse cmd line arguments
-    print('...parsing cmd line input')
     args = parseArgs(argv)
+    # parse cmd line arguments
     # test paths
     try:
         if not os.path.isfile(args.txt_file):
@@ -29,17 +29,21 @@ def main(argv):
     except NotADirectoryError:
         print('Output directory does not exist. Either check the path, or create the directory, and try again')
 
+    print('...reading text file')
     # open file, clean lines down to fastqfilename
     with open(args.txt_file) as input_file:
         lines = input_file.readlines()
+        print('...cleaning filenames')
         lines = list(map(lambda x: re.sub(r":\d+\n", '', x), lines))
         lines = list(map(lambda x: re.sub(r"Brent/", '', x), lines))
 
+    print('...writing dataframe to %s' %args.output_dir)
     # convert to dataframe
     df = pd.DataFrame(lines, columns=['fastqFileName'])
     # write out
     output_path = os.path.join(args.output_dir, 'fastq_column_from_email.xlsx')
-    df.to_excel(output_path)
+    df.to_excel(output_path, index=False)
+    print('complete')
 
 def parseArgs(argv):
     parser = argparse.ArgumentParser(description="convert a text file copied/pasted from sequencer folks to a dataframe column for fastqFile sheets")
