@@ -19,10 +19,14 @@ unique_key_columns = {"fastqFiles": ['libraryDate', 'libraryPreparer', 'libraryS
         "library":['libraryDate', 'libraryPreparer', 'librarySampleNumber','s2cDNADate', 's2cDNAPreparer', 's2cDNASampleNumber'],
         "s2cDNASample": ['s2cDNADate', 's2cDNAPreparer', 's2cDNASampleNumber','s1cDNADate', 's1cDNAPreparer', 's1cDNASampleNumber'],
         "s1cDNASample": ['s1cDNADate', 's1cDNAPreparer', 's1cDNASampleNumber', 'rnaDate', 'rnaPreparer', 'rnaSampleNumber'],
-        "rnaSample": ['rnaDate', 'rnaPreparer', 'rnaSampleNumber','harvestDate', 'harvester', 'biosampleNumber'],
-        "bioSample": ['harvestDate', 'harvester', 'biosampleNumber']}
+        "rnaSample": ['rnaDate', 'rnaPreparer', 'rnaSampleNumber','harvestDate', 'harvester', 'bioSampleNumber'],
+        "bioSample": ['harvestDate', 'harvester', 'bioSampleNumber']}
 
 def main(argv):
+    
+    # set pandas to print entire dataframe, no limit
+    pd.set_option("display.max_rows", None, "display.max_columns", None)
+    
     args = parseArgs(argv)
 
     if args.database_subdir:
