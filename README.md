@@ -42,7 +42,7 @@ python
 >>> db = DatabaseAccuracyObject() # there are options here in the event that you are on an interactive node, etc. Please message me if you need more options
 >>> db.fullReport()
 ```
-The output will go into your /scratch/mblab/$USER/rnaseq_pipeline/reports directory with the name database_accuracy_<date>_<time>.txt
+The output will go into your /scratch/mblab/$USER/rnaseq_pipeline/reports directory with the name database_accuracy_date_time.txt
 
 # Git workflow
 
