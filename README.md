@@ -17,6 +17,33 @@ Within any given run, the index1 sequence must be unique. Please make sure that 
 
 See the [wiki](https://github.com/BrentLab/database_files/wiki) for a detailed explanation of all subdirectories and sheet structure
 
+# verify_metadata_accuracy.py
+
+Before pushing any changes, please run the script verify_metadata_accuracy.py located in the database_files/scripts directory. Assuming that you are in a terminal, located in the database_files directory, do the following:
+
+```
+scripts/verify_metadata_accuracy.py -h
+
+# note: to run the script on the database, again assuming you are currently located in the database_files directory, enter:
+
+scripts/verify_metadata_accuracy.py -d .
+```
+This script only checks the uniqueness of keys within each subdirectory. It checks from fastqFiles --> bioSample. If you don't like the script, please feel free to post a "issue report" with suggestions.
+
+# DatabaseAccuracyObject
+This script is currently only available on htcf (it is part of the rnaseq_pipeline module). It also has a deceivingly similar name, but does not do the same thing -- eventually these two scripts will be merged.
+
+The DatabaseAccuracyObject checks that each column adheres to the specifications in the wiki. To produce a report, do the following (after logging into htcf):
+
+```
+ml rnaseq_pipeline
+python
+>>> from rnaseq_tools.DatabaseAccuracyObject import DatabaseAccuracyObject
+>>> db = DatabaseAccuracyObject() # there are options here in the event that you are on an interactive node, etc. Please message me if you need more options
+>>> db.fullReport()
+```
+The output will go into your /scratch/mblab/$USER/rnaseq_pipeline/reports directory with the name database_accuracy_date_time.txt
+
 # Git workflow
 
 1. Pull the most up-to-date repository. This can be done with the following command: 
