@@ -6,7 +6,7 @@ Some care may need to be taken to ensure that the sequence facility follows our 
 
 The format as of 2/28/2019 is: 
 
-LabOwner_ arbitraryLibraryNumber_GTAC_index#_index1_index2_<sequencer stuff>.fastq.gz
+LabOwner_ arbitraryLibraryNumber_GTAC_index#_index1_index2_sequencer stuff.fastq.gz
 
 Example:
 BRENT_1_GTAC_1_AAGATTA_GTAACCA_S1_R1_001.fastq.gz 
