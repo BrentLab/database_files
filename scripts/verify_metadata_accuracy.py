@@ -34,6 +34,12 @@ unique_key_by_sheet = {"fastqFiles": ['libraryDate', 'libraryPreparer', 'library
 
 metadata_subdirectories = ['fastqFiles', 'library', 's2cDNASample', 's1cDNASample', 'rnaSample', 'bioSample']
 
+# print full database
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
+
 def main(argv):
     
     args = parseArgs(argv)
