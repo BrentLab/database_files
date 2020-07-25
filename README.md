@@ -42,7 +42,7 @@ python
 >>> db = DatabaseAccuracyObject() # there are options here in the event that you are on an interactive node, etc. Please message me if you need more options
 # the first option will report every discrepency in any column
 >>> db.fullReport()
-# the next only reports discrepencies in key columns and filnames
+# the next only reports discrepencies in key columns and filenames
 >>> db.fullReport(key_columns_only=True)
 
 ```
