@@ -31,16 +31,20 @@ scripts/verify_metadata_accuracy.py -d .
 This script only checks the uniqueness of keys within each subdirectory. It checks from fastqFiles --> bioSample. If you don't like the script, please feel free to post a "issue report" with suggestions.
 
 # DatabaseAccuracyObject
-This script is currently only available on htcf (it is part of the rnaseq_pipeline module). It also has a deceivingly similar name, but does not do the same thing -- eventually these two scripts will be merged.
+This script is currently only available on htcf (it is part of the rnaseq_pipeline module).
 
-The DatabaseAccuracyObject checks that each column adheres to the specifications in the wiki. To produce a report, do the following (after logging into htcf):
+note: if you pass key_columns_only=True to fullReport(), a shorter form of the report will be generated with key columns only:
 
 ```
 ml rnaseq_pipeline
 python
 >>> from rnaseq_tools.DatabaseAccuracyObject import DatabaseAccuracyObject
 >>> db = DatabaseAccuracyObject() # there are options here in the event that you are on an interactive node, etc. Please message me if you need more options
+# the first option will report every discrepency in any column
 >>> db.fullReport()
+# the next only reports discrepencies in key columns and filnames
+>>> db.fullReport(key_columns_only=True)
+
 ```
 The output will go into your /scratch/mblab/$USER/rnaseq_pipeline/reports directory with the name database_accuracy_date_time.txt
 
