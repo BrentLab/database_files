@@ -126,7 +126,7 @@ def getFilePaths(metadata_path, metadata_subdirectories = metadata_subdirectorie
     return datadir_dict
 
 def concatMetadata(subdirectory_name, subdirectory_file_list):
-    # creates concatenatd dataframe from all files in a given list of paths (files of a certain subdirectory of user inputted data directory
+    # creates concatenated dataframe from all files in a given list of paths (files of a certain subdirectory of user inputted data directory
     # Args: a dictionary {subdirectory: [list, of, sheet, paths]} eg {bioSample: [path/to/sheet1, path/to/sheet2, ...]}
     # Returns: all of the sheets concatenated vertically
 
