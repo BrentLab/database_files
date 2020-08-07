@@ -41,9 +41,9 @@ python
 >>> from rnaseq_tools.DatabaseAccuracyObject import DatabaseAccuracyObject
 >>> db = DatabaseAccuracyObject() # there are options here in the event that you are on an interactive node, etc. Please message me if you need more options
 # the first option will report every discrepency in any column
->>> db.fullReport()
+>>> db.report()
 # the next only reports discrepencies in key columns and filenames
->>> db.fullReport(key_columns_only=True)
+>>> db.report(key_columns_only=True)
 
 ```
 The output will go into your /scratch/mblab/$USER/rnaseq_pipeline/reports directory with the name database_accuracy_date_time.txt
