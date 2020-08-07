@@ -33,7 +33,7 @@ This script only checks the uniqueness of keys within each subdirectory. It chec
 # DatabaseAccuracyObject
 This script is currently only available on htcf (it is part of the rnaseq_pipeline module).
 
-note: if you pass key_columns_only=True to Report(), a shorter form of the report will be generated with key columns only:
+note: if you pass key_columns_only=True to report(), a shorter form of the report will be generated with key columns only:
 
 ```
 ml rnaseq_pipeline
