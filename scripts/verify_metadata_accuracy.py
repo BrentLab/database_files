@@ -32,7 +32,10 @@ unique_key_by_sheet = {"fastqFiles": ['libraryDate', 'libraryPreparer', 'library
                        "rnaSample": ['rnaDate', 'rnaPreparer', 'rnaSampleNumber'],
                        "bioSample": ['harvestDate', 'harvester', 'bioSampleNumber']}
 
-metadata_subdirectories = ['fastqFiles', 'library', 's2cDNASample', 's1cDNASample', 'rnaSample', 'bioSample']
+#metadata_subdirectories = ['fastqFiles', 'library', 's2cDNASample', 's1cDNASample', 'rnaSample', 'bioSample']
+metadata_subdirectories = ['bioSample', 'rnaSample', 's1cDNASample', 's2cDNASample', 'library', 'fastqFiles']
+
+
 
 # print full database
 pd.set_option('display.max_rows', None)
